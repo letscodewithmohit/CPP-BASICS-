@@ -63,3 +63,53 @@ void symmetry(int n) {
         cout<<endl;
     }
 }
+
+
+#APPROCH 2
+
+//upper
+int spaces1 = 0;   
+    for(int i=1; i<=n; i++){
+ 
+        //for stars
+        for(int star = 1; star <= n-i+1; star++){
+            cout<<"*";
+        }
+
+        //for spaces
+
+        for(int space = 1; space <= spaces1; space++ ){
+            cout<<" ";
+        }
+
+        for(int star = 1; star <= n- i+1; star++){
+            cout<<"*";
+        }
+
+        spaces1 += 2;
+        cout<<endl;
+   }
+
+//lower 
+   int spaces2 = 2*n-2;
+  
+   for(int i=1; i<=n; i++){
+ 
+        //for stars
+        for(int star = 1; star <= i; star++){   //minnor changed in loop
+            cout<<"*";
+        }
+
+        //for spaces
+
+        for(int space = 1; space <= spaces2; space++ ){
+            cout<<" ";
+        }
+
+        for(int star = 1; star <= i; star++){    //minnor changed in loop
+            cout<<"*";
+        }
+
+        spaces2 -= 2;
+        cout<<endl;
+    }
