@@ -1,0 +1,56 @@
+
+*          *
+**        **
+***      ***
+****    ****
+*****  *****
+************
+*****  *****
+****    ****
+***      ***
+**        **
+*          *
+
+
+/*code*/
+
+
+void symmetry(int n) {
+    // Write your code here.
+
+
+  int spaces = 2 * n - 2;
+
+    for(int i = 1; i <= 2 * n - 1; i++) {
+        
+        int stars = i;
+        if(i > n) {
+            stars = 2 * n - i;
+        }
+
+        // Inner loop for first set of stars
+        for(int star = 1; star <= stars; star++) {
+            cout << "* ";
+        } 
+
+        // Inner loop for spaces
+        for(int sp = 1; sp <= spaces; sp++) {
+            cout << " ";
+        }
+
+        // Inner loop for second set of stars
+        for(int star = 1; star <= stars; star++) {
+            cout << "* ";
+        } 
+
+        cout << endl;
+
+        // Adjust spaces
+        if(i < n) {
+            spaces -= 2;
+        } else {
+            //first time reset to 0
+            spaces += 2;
+        }
+    }
+}
