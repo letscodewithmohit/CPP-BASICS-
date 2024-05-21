@@ -6,7 +6,7 @@ A B C
 A B
 A
 
-/*cpde*/
+/*code*/
 
 void nLetterTriangle(int n) {
     // Write your code here.
