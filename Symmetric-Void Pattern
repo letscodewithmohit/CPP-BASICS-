@@ -1,0 +1,65 @@
+************
+*****  *****
+****    ****
+***      ***
+**        **
+*          *
+*          *
+**        **
+***      ***
+****    ****
+*****  *****
+************
+
+#APPROCH 1 BY REVERSE
+/*code*/
+
+
+void symmetry(int n) {
+    // Write your code here.
+
+//upper pattern
+    int spaces1 = 0;
+    for(int i=1; i<=n; i++){
+
+        //for stars
+        for(int star = 1; star <= n-i+1; star++){
+            cout<<"* ";
+        }
+
+        //for spaces
+
+        for(int space = 1; space <= spaces1; space++ ){
+            cout<<" ";
+        }
+
+        for(int star = 1; star <= n- i+1; star++){
+            cout<<"* ";
+        }
+
+        spaces1 += 2;
+        cout<<endl;
+    }
+//lower pattern
+    int spaces2 = 2*n - 2;
+    for(int i=n; i>=1; i--){
+
+        //for stars
+        for(int star = 1; star <= n-i+1; star++){
+            cout<<"* ";
+        }
+
+        //for spaces
+
+        for(int space = 1; space <= spaces2; space++ ){
+            cout<<" ";
+        }
+
+        for(int star = 1; star <= n- i+1; star++){
+            cout<<"* ";
+        }
+
+        spaces2 -= 2;
+        cout<<endl;
+    }
+}
