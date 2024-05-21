@@ -1,0 +1,31 @@
+
+A
+A B
+A B C
+A B C D
+A B C D E
+A B C D E F
+
+void nLetterTriangle(int n) {
+  // Write your code here.
+  //Approch : 1 efficent 
+/*
+  for(int i=1; i<=n; i++){
+      char ch = 'A';
+      for(int j=1; j<=i; j++){
+          cout<<ch<<" ";
+          ch++;
+      }
+      cout<<endl;
+  }
+}
+*/
+//Approch : 2
+
+for(int i=0; i<n;i++){
+  for (char ch = 'A'; ch <= 'A' + i; ch++) {
+    cout << ch << " ";
+  }
+  cout << endl;
+}
+}
